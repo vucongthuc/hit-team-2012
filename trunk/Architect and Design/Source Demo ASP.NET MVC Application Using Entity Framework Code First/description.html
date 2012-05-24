@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET MVC Application Using Entity Framework Code First</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ADO.NET Entity Framework, ASP.NET, ASP.NET MVC, Entity Framework
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Repository Pattern, Concurrency, Unit of Work Pattern, Code First, ASP.NET Code Sample Downloads
+                        </div>
+                    </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">1/18/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/ASPNET-MVC-Application-b01a9fe8">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>A Visual Studio project which shows how to use the Entity Framework in an ASP.NET&nbsp;MVC web application project, using the&nbsp;Code First&nbsp;development approach. The code illustrates the following topics:</p>
+<ul>
+<li>Creating a data model using data annotations attributes, and fluent API for database mapping.
+</li><li>Performing basic CRUD operations. </li><li>Filtering, ordering, and grouping data. </li><li>Working with related data. </li><li>Handling concurrency. </li><li>Implementing table-per-hierarchy inheritance. </li><li>Implementing the repository and unit of work patterns. </li><li>Performing raw SQL queries. </li><li>Performing no-tracking queries. </li><li>Working with proxy classes. </li><li>Disabling automatic detection of changes. </li><li>Disabling validation when saving changes. </li></ul>
+<h1>Getting Started</h1>
+<p>To build and run this sample, you must have Visual Studio 2010 SP1 and MVC 3 with the MVC 3 Tools Update&nbsp;installed. Unzip the ContosoUniversity.zip file into your Visual Studio Projects directory (My Documents\Visual Studio 2010\Projects) and open the
+ ContosoUniversity.sln solution.</p>
+<h1>Running the Sample</h1>
+<p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command. You will see the home page which includes a menu bar.</p>
+<p><img src="description/Contoso_University_home_page.PNG" alt="" width="633" height="473"></p>
+<p>From this page you can select any of the tabs to perform various actions such as display a list of students, add new students, display a list of instructors, and so forth.</p>
+<p><img src="description/Students_index_page.PNG" alt="" width="650" height="740"></p>
+<p><img src="description/Students_Create_page.PNG" alt="" width="650" height="797"></p>
+<p><img src="description/Instructors_Index_page.PNG" alt="" width="653" height="750"></p>
+<h1>Source Code Overview</h1>
+<p>The <em>ContosoUniversity</em> folder includes the following folders and files</p>
+<ul>
+<li><em>App_Data</em> folder - Holds the SQL Server&nbsp;Compact database file. </li><li><em>Content</em> - Holds CSS files. </li><li>Controllers - Holds controller classes. </li><li><em>DAL</em> folder - The data access layer.&nbsp; Holds the context, initializer, repository, and unit of work classes.
+</li><li><em>Models</em> folder - Holds model classes. </li><li><em>Properties</em> or <em>MyProject</em> folder - Project properties. </li><li><em>Scripts</em> folder - Script files. </li><li><em>ViewModels</em> folder -&nbsp;Holds view model classes.&nbsp; </li><li><em>Views</em>&nbsp;folder - Holds view classes. </li><li>Visual Studio project file (.csproj or .vbproj). </li><li><em>packages.config</em> - Specifies NuGet packages included in the project. </li><li><em>Global.asax</em> file - Includes database initializer code. </li><li>Web.config file -&nbsp;Includes the connection string to the database. </li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>
