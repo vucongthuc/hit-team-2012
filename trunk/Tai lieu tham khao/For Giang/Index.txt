@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POS System</title>
+		<style type="text/css">
+		body {width:100%; margin:auto; padding:0;}
+		.BorderL{border-left:2px;border-left-style:solid;border-color:#98bf21;}
+		</style>
+</head>
+<body>
+	<table width="100%"; height="80px">
+		<tr height ="100px">
+			<td style="height: 100px; background-image: url('Content/themes/base/images/Background.jpg'); font-family: Mistral; 
+				font-size: 90px; color: #000066; font-style: oblique; text-decoration: underline overline; text-align: center">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POS System &nbsp;&nbsp;&nbsp;&nbsp; 
+				<img src="Content/themes/base/images/POS.png" style="margin-right: 5px; height: 100px; width: 140px;" align="top" />
+			</td>
+		</tr>
+		<tr>
+			<td align="right" style="height: 20px; background-color: #E8E8E8 ">
+				<a>Welcome:</a>&nbsp;
+				<a href="#">User name</a>&nbsp;||&nbsp;
+				<a href="#">Sign out</a>&nbsp;||&nbsp;
+				<a href="#">Change password</a>&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#000066" tyle="height: 1px"></td>
+		</tr>
+	</table>
+	
+	<table width="100%">
+		<tr >
+			<td width="70%"> <label for="Search_goods_id">Search Goods ID</label>:
+			<input type="text" id="Search_goods_id" name="Search_goods_id" size="30" /> 
+				<button name="btnSearch_goods" VALUE="ok" type="submit" ACCESSKEY="enter">
+				<img src="Content/themes/base/images/Search_goods.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left" />Search</button> 
+			</td>
+			<td class ="BorderL" align="center" style="font-family: Mistral; font-size: 30px; color: #000066;">Categories
+			
+			</td>
+		</tr>
+		<tr>	
+			<td style="border-width: thin; border-style: ridge; text-align: center; height:200px">
+			</td>
+			<td>
+				<button name="btnDemo_goods" VALUE="ok" type="submit" ACCESSKEY="enter">
+				<img src="Content/themes/base/images/Coca.png" style="margin-right: 2px; height: 30px; width: 10px;" align="left"/>Demo goods</button> 
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td align="right">  
+				<label for="total">Total</label>:
+				<input type="text" id="txtTotal_point" name="total" size="7px"  value ="(Total point)"/> 
+				<input type="text" id="txtTotal_money" name="total" size="10px" value ="(Total money)"/> 
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td align="center">
+			<hr />
+				<button name="btnAdd_new_customer" VALUE="ok" type="submit">
+				<img src="Content/themes/base/images/Add_cus.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Add new customer</button>
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td> 
+				<label for="Search_customer_id">Customer ID</label>:&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				<input type="text" id="Search_customer_id" name="Search_customer_id" size="15"/> 
+				<button name="btnSearch_customer" VALUE="ok" type="submit" ACCESSKEY="enter">
+				<img src="Content/themes/base/images/Search_cus.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Search</button> 
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td>
+				<label for="Customer_name">Customer name</label>:
+				<input type="text" id="Customer_name" name="Customer_name" size="30px"/>
+				<label for="Curent_point">Curent point</label>:
+				<input type="text" id="Curent_point" name="Curent_point" size="7px" "/> 
+			</td>
+
+		</tr>
+		
+		<tr colspan="2">
+			<td align="center">
+			<hr />
+				<button name="btnPay_point_money" VALUE="ok" type="submit">
+				<img src="Content/themes/base/images/Point_money.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Pay by money and point</button>
+				&nbsp;&nbsp;&nbsp
+				
+				<button name="btnPay_point" VALUE="ok" type="submit" width="250px">
+				<img src="Content/themes/base/images/BonusPoints.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Pay by point</button>
+				&nbsp;&nbsp;&nbsp
+				
+				<button name="btnPay_money" VALUE="ok" type="submit">
+				<img src="Content/themes/base/images/Money.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Pay by money</button>
+				&nbsp;&nbsp;&nbsp
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td align="right">
+			<hr />
+				<label for="Received_money">Received money</label>:
+				<input type="text" id="Received_money" name="Received_money" size="10px"/>
+				<button name="btnReceived" VALUE="ok" type="submit" ACCESSKEY="enter">
+				<img src="Content/themes/base/images/ok.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Received</button> 
+				
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td align="right">
+				<label for="Remain_money">Remain</label>:
+				<input type="text" id="txtRemain__point" name="Remain_point" size="10px"  value ="(Remain point)"/> 
+				<input type="text" id="txtRemain_money" name="Remain_money" size="10px" value ="(Remain money)"/>
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td align="center">
+				<button name="btnPrint" VALUE="ok" type="submit" ACCESSKEY="enter">
+				<img src="Content/themes/base/images/ok.png" style="margin-right: 5px; height: 20px; width: 20px;" align="left"/>Print bill</button> 
+			</td>
+		</tr>
+	</table>
+	
+	<table style="width: 100%; height: 80px">
+		<tr colspan="2">
+			<td bgcolor="#000066" colspan="2" style="height: 1px"></td>
+		</tr>
+		<tr>
+			<td align="center" style="background-image: url('Content/themes/base/images/Background.jpg')">
+							Copyright &copy;
+							HIT Company All Reserve<br/>
+							Information Technology Department - Van Lang University <br/>
+							Phone: 01656002722 - Fax: 09021991 - Email: chan.tinh157@gmail.com
+			</td>
+			<td style="width: 100px; background-image: url('Content/themes/base/images/Background.jpg')">
+				<img src="Content/themes/base/images/HIT.png" style="height: 80px; width: 100px;" align="center" />
+			</td>
+		</tr>
+	</table>
+
+
+
+</body>
+</html>
