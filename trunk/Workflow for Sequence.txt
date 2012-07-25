@@ -1,0 +1,7 @@
+Yeu cau mo giao dien: Client --> Controller --> Goi dbContext --> Goi tu Database --> luu vao model --> return lai cho controller
+			Controller --> lay du lieu tu model --> Luu vao viewmodel tuc la class Common (Thang View ko lam viec voi thang Model ma qua View Model) 
+			Controller--> Hien Thi View (Index)
+Khi them hang (loop): Client --> Controller (xu ly event) --> Luu vao Common (ViewModel)
+			Controller --> display View len --> View goi ham trong common (ViewModel) de hien thi ra
+Khi Thanh Toan (Voi 3 phuong thuc):  Client --> Controller (xu ly event nhu tinh toan bill) --> Goi ViewModel (chua bien de tinh toan) --> Luu vao Model
+			 	Controller --> Goi dbContext --> Luu vao database 
