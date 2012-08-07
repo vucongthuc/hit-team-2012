@@ -1,0 +1,11 @@
+﻿ Các tiêu chí thống kê:
+ chọn 1 khoa:
+Tổng hs nhận của khoa / Tổng có của khoa
+	Chi tiết: ngày 1 2 3
+Tổng hs nhận of khoa / tổng nhận của trường
+Tổng khoa / Tổng trường
+
+chọn toàn trường:
+Show Toàn bộ các khoa (tổng nhận)
+Tổng nhận của trường/ Tổng
+		
