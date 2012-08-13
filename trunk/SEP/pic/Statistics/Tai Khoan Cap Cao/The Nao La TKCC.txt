@@ -1,0 +1,2 @@
+﻿Là tài khoản của các phòng ban trong trường trừ Admin và Trưởng Khoa và NV khoa
+Có thể xem đc: Thống kê cấp trường (tổng quan và chi tiết trong 3 ngày) và thống kê tất cả các khoa khoa (tổng quan và chi tiết trong 3 ngày).
